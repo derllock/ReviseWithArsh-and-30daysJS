@@ -32,10 +32,10 @@ class Solution {
         
 //         for(int i = 0; i < prices.length; i++){
 //             if(prices[i] < lsf){
-//                 lsf = prices[i];
+//                 lsf = prices[i]; -------- here the buying price is being updated to guarantee least no., in this way selling price will always be infront         
 //             }
 //             pist = prices[i] - lsf;
-//             if(op < pist){
+//             if(op < pist){          ---- maximising the difference
 //                 op = pist;
 //             }
 //         }
