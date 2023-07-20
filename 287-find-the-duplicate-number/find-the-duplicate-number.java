@@ -10,9 +10,9 @@ class Solution {
 
         // 1) sort asc and return first repeating eelement
         // 2) Hashset loop(search duplicate if not then insert in set)
-        // 3) loop(swap nums[0]<->nums[nums[0] if both are equal return that]
-        // 4) 
-             int duplicate = -1;
+        // 3) loop(swap nums[0]<->nums[nums[0]] if both are equal return that]
+        // 4) like 3...nums[abs nums[nums[0]]<0]break or make it negative
+        int duplicate = -1;
         for (int i = 0; i < nums.length; i++) {
             int now = Math.abs(nums[i]);
             if (nums[now] < 0) {
