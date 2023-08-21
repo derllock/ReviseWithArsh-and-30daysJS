@@ -1,4 +1,4 @@
-class Solution {
+class Solution {                                                        // foundation: we check ke duplicate for, i,j,k. Then we control value of j,k according to output od 3sum
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
 
