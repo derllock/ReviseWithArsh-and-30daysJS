@@ -14,7 +14,7 @@ class Solution {
 //     public List<Integer> findDuplicates(int[] nums) {
 //         List<Integer> ans = new ArrayList<>();
 
-//         for (int num : nums) {                                                   // fundamental find duplicates in array in O(N) works because every value in array is less than length of array
+//         for (int num : nums) {                                                   // foundation find duplicates in array in O(N) works because every value in array is less than length of array
 //             if (nums[Math.abs(num) - 1] < 0) { // seen before                      
 //                 ans.add(Math.abs(num));
 //             }
