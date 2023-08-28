@@ -1,82 +1,59 @@
 class Solution {
     public String intToRoman(int num) {
-        // String roman="";
-        // int nums=num;
+        StringBuilder roman = new StringBuilder();
         
-        // int pow=0;
-        // while(pow<String.valueOf(num).length()){
-        //     int digit=(nums%10);
-        //     ++pow;
-        //     nums=nums/10;
-        //     if(pow==1){
-        //         switch(digit){
-        //             case 1:roman="I"; break;
-        //             case 2:roman="II";break;
-        //             case 3:roman="III"; break;
-        //             case 4:roman="IV"; break;
-        //             case 5:roman="V" ;break;
-        //             case 6:roman="VI" ;break;
-        //             case 7:roman="VII" ;break;
-        //             case 8:roman="VIII" ;break;
-        //             case 9:roman="IX"; break;
-        //             default: break;
-        //         }
-        //     }
-        //     else if(pow==2){
-        //        switch(digit){
-        //             case 1:roman="X"+roman; break;
-        //             case 2:roman="XX"+roman; break;
-        //             case 3:roman="XXX"+roman; break;
-        //             case 4:roman="XL"+roman; break;
-        //             case 5:roman="L"+roman;break;
-        //             case 6:roman="LX"+roman; break;
-        //             case 7:roman="LXX" +roman;break;
-        //             case 8:roman="LXXX" +roman;break;
-        //             case 9:roman="XC" +roman;break;
-        //             default: break;
-        //         } 
-        //     }
-        //     else if(pow==3){
-        //        switch(digit){
-        //             case 1:roman="C"+roman; break;
-        //             case 2:roman="CC"+roman; break;
-        //             case 3:roman="CCC"+roman; break;
-        //             case 4:roman="CD"+roman; break;
-        //             case 5:roman="D"+roman;break;
-        //             case 6:roman="DC"+roman; break;
-        //             case 7:roman="DCC" +roman;break;
-        //             case 8:roman="DCCC" +roman;break;
-        //             case 9:roman="CM" +roman;break;
-        //             default: break;
-        //         } 
-        //     }
+        int pow = 0;
+        while (num > 0) {
+            int digit = num % 10;
             
-        //     else if(pow==4){
-        //        switch(digit){
-        //             case 1:roman="M"+roman; break;
-        //             case 2:roman="MM"+roman; break;
-        //             case 3:roman="MMM"+roman; break;
-        //              default: break;
-        //         } 
-        //     }
-        StringBuilder ans = new StringBuilder();
- String ones[] = {"","I","II","III","IV","V","VI","VII","VIII","IX"};
-        String tens[] = {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"};
-        String hrns[] = {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"};
-        String ths[]={"","M","MM","MMM"};
-        
-        ans.append(ths[num / 1000]);
-ans.append(hrns[(num % 1000) / 100]);
-ans.append(tens[(num % 100) / 10]);
-ans.append(ones[num % 10]);
-
-return ans.toString();
-
+            if (pow == 0) {
+                switch (digit) {
+                    case 1: roman.insert(0, "I"); break;
+                    case 2: roman.insert(0, "II"); break;
+                    case 3: roman.insert(0, "III"); break;
+                    case 4: roman.insert(0, "IV"); break;
+                    case 5: roman.insert(0, "V"); break;
+                    case 6: roman.insert(0, "VI"); break;
+                    case 7: roman.insert(0, "VII"); break;
+                    case 8: roman.insert(0, "VIII"); break;
+                    case 9: roman.insert(0, "IX"); break;
+                }
+            } else if (pow == 1) {
+                switch (digit) {
+                    case 1: roman.insert(0, "X"); break;
+                    case 2: roman.insert(0, "XX"); break;
+                    case 3: roman.insert(0, "XXX"); break;
+                    case 4: roman.insert(0, "XL"); break;
+                    case 5: roman.insert(0, "L"); break;
+                    case 6: roman.insert(0, "LX"); break;
+                    case 7: roman.insert(0, "LXX"); break;
+                    case 8: roman.insert(0, "LXXX"); break;
+                    case 9: roman.insert(0, "XC"); break;
+                }
+            } else if (pow == 2) {
+                switch (digit) {
+                    case 1: roman.insert(0, "C"); break;
+                    case 2: roman.insert(0, "CC"); break;
+                    case 3: roman.insert(0, "CCC"); break;
+                    case 4: roman.insert(0, "CD"); break;
+                    case 5: roman.insert(0, "D"); break;
+                    case 6: roman.insert(0, "DC"); break;
+                    case 7: roman.insert(0, "DCC"); break;
+                    case 8: roman.insert(0, "DCCC"); break;
+                    case 9: roman.insert(0, "CM"); break;
+                }
+            } else if (pow == 3) {
+                switch (digit) {
+                    case 1: roman.insert(0, "M"); break;
+                    case 2: roman.insert(0, "MM"); break;
+                    case 3: roman.insert(0, "MMM"); break;
+                }
+            }
             
-        // }
-        // return roman;
+            num /= 10;
+            pow++;
+        }
         
-
-        
+        return roman.toString();
     }
 }
