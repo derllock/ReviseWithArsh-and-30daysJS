@@ -3,6 +3,7 @@ class Solution {
         StringBuilder sbreverse=new StringBuilder(s);
         sbreverse.reverse();
         StringBuilder sb=new StringBuilder(s);
+        if(sb.compareTo(sbreverse)==0)return true;
         int index=0;
         StringBuilder sb2=new StringBuilder(sb);
          StringBuilder sbreverse2=new StringBuilder(sbreverse);
