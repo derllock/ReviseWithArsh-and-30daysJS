@@ -1,10 +1,8 @@
 class Solution {
     public boolean validPalindrome(String s) {
-        if(s.length()==1)return true;
         StringBuilder sbreverse=new StringBuilder(s);
         sbreverse.reverse();
         StringBuilder sb=new StringBuilder(s);
-        int anomaly=0;
         int index=0;
         while(index<sb.length()){
             if(sb.charAt(index)!=sbreverse.charAt(index)){
