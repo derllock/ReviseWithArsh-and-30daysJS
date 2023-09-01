@@ -6,7 +6,7 @@ class Solution {
         return list;
     }
     
-    public void backtrack(List<String> list, StringBuilder str, int open, int close, int max){
+    public void backtrack(List<String> list, StringBuilder str, int open, int close, int max){ //foundation backtracking
         
         if(str.length() == max*2){
             list.add(str.toString());
