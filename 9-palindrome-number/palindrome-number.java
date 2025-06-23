@@ -9,7 +9,7 @@ class Solution {
                 ddend/=10;
             }
             System.out.println(remainder);
-            if(remainder==x)return true;
+            if(remainder==x)return true;//oye
             else return false;
         }
     }
